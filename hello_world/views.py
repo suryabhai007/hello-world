@@ -4,4 +4,7 @@ from django.shortcuts import render
 # Create your views here.
 
 def hello(request):
-    return HttpResponse('Hello,world')
+    context = {
+        "name":"Raselacademy"
+        }
+    return render(request, 'hello_world/index.html', context)
